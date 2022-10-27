@@ -1,32 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import twitterLogo from "./assets/twitter-logo.svg"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <div className="header-container">
+          <p className="header">🖼 Meu Portal de GIF 🖼</p>
+          <p className="sub-text">Veja sua coleção de GIF no metaverso ✨</p>
+        </div>
+        <div className="footer-container">
+          <a className="footer-text" href="https://github.com/thiagodeev" target="_blank" rel="noopener noreferrer">
+            Feito com ❤️ por @thiagodeev e pela 
+          </a>
+          
+          <a
+            className="footer-text"
+            href="https://twitter.com/web3dev_"
+            target="_blank"
+            rel="noreferrer"
+            style={{display: 'flex', alignItems: 'center'}}
+          ><img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />web3dev_</a>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
